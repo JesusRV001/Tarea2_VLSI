@@ -39,6 +39,14 @@ $C_{in} = \frac{500 \lambda \cdot 1}{5.77}$
 $C_{in} = 87 \lambda$
 
 ##### Método de Elmore para estimación del retardo
+Para realizar este cálculo, se considera el circuto esquemático de la Figura X, donde se detallan las resistencias, capacitancias y ramas a tomar en cuenta al establecer el modelo RC, primeramente se calcula el tienmpo de contaminación $t_{cdr}$:
+
+$t_{cdr} = \left(\frac{R}{2} + \frac{R}{2}\right)(12C + 3C) + 4C\left(\frac{R}{2}\right) + 4C\left(\frac{R}{2}\right) + RC\left(3 + 450\mu\right)$
+
+$ t_{cdr} = 15RC + 2RC + 2RC + 19.98ps$
+Donde %19,98 ps$ corresponde al aporte de tiempo que aplica el inversor conectado a la capacitancia parásita asociada a la conexión con la salida de la compuerta compleja.
+
+
 
 #### Segunda solución: Compuertas simples
 
