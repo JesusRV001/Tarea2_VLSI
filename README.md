@@ -79,11 +79,22 @@ $t_{pdf} = 144.86 ps$
 
 #### Segunda solución: Compuertas simples
 
-![var](Imagenes/sim.jpg)
+$P = 2\cdot 2 = 4$
+
+$G = \frac{5}{3} \cdot \frac{5}{3} = \frac{25}{9}$
+
+$F = GBH = \frac{25}{9} \cdot 1 \cdot \frac{50}{3} = \frac{1250}{27}$
+
+$X = \sqrt{\frac{1250}{27}} = 6.8$
+
+$D = 2 \cdot 6.8 \cdot 4 = 18.6 \tau$
+
 
 
 ##### Método de Elmore para estimación del retardo
 Para el cálculo de los tiempos de retardo por el método de Elmore para esta compuerta, se tomó en cuenta el esquemático mostrado a continuación:
+
+![var](Imagenes/sim.jpg)
 
 En base a este modelo, se calculó cada uno de los tiempos de contaminación y propagación, primeramente el $t_{cdr}$:
 $t_{pdr} = \left(\frac{R}{2} + \frac{R}{2}\right)(6C + 3C) + 4C\left(\frac{R}{2}\right)3C + \frac{R}{2}(3C + 2C + 450\mu C)$
