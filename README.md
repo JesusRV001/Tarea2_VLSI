@@ -41,6 +41,8 @@ $C_{in} = 87 \lambda$
 ##### Método de Elmore para estimación del retardo
 Para realizar este cálculo, se consideró el esquemático de la Figura que se muestra a continuación:
 
+![var](Imagenes/Com.jpg)
+
 Donde se detallan las resistencias, capacitancias y ramas a tomar en cuenta al establecer el modelo RC. Primeramente se calculó los tiempos de contaminación, iniciando con el $t_{cdr}$:
 
 $t_{cdr} = \left(\frac{R}{2} + \frac{R}{2}\right)(12C + 3C) + 4C\left(\frac{R}{2}\right) + 4C\left(\frac{R}{2}\right) + RC\left(3 + 450\mu\right)$
@@ -77,7 +79,7 @@ $t_{pdf} = 144.86 ps$
 
 #### Segunda solución: Compuertas simples
 
-
+![var](Imagenes/sim.jpg)
 
 
 ##### Método de Elmore para estimación del retardo
