@@ -108,4 +108,33 @@ $t_{pdf} = 19.98 ps$
 
 ### Parte 2. Verificación de la funcionalidad lógica y eléctrica de los circuitos mediante simulación
 
+La teoría de esfuerzo lógico por sí sola no es suficiente para realizar una aproximación precisa del retardo de propagación y contaminación en un circuito CMOS. Esto se debe a que la teoría de esfuerzo lógico es una aproximación simplificada que no considera todos los factores que influyen en el rendimiento del circuito.
+
+En particular, la teoría de esfuerzo lógico no tiene en cuenta los efectos de las cargas capacitivas parásitas presentes en el circuito real. Estas capacitancias parásitas, que surgen de las interconexiones y las capacitancias de difusión y polisilicio, pueden tener un impacto significativo en los tiempos de retardo, especialmente en el caso de cargas pesadas o caminos de señal largos.
+
+Además, la teoría de esfuerzo lógico asume que las formas de onda de entrada son ideales, con transiciones abruptas entre los niveles lógicos, enn la práctica, las formas de onda de entrada pueden tener tiempos de transición finitos, lo que puede afectar los tiempos de retardo del circuito.
+
+Entonces, aunque la teoría de esfuerzo lógico puede ofrecer una estimación inicial del rendimiento del circuito, para obtener una evaluación precisa de los tiempos de retardo y contaminación, la simulación es el enfoque más efectivo. Posteriormente, la teoría de Elmore surge como una herramienta complementaria, ya que considera los peores escenarios escenarios a los que pueden estar expuestos los circuitos.
+
+
+
+
+
+
 ### Parte 3. Implementación de los *Layouts* de los circuitos
+
+
+
+
+
+
+
+En base a a la afirmación planteada sobre el cáluclo de potencia incorrecto, es importante comprender que la aproximación utilizada previamente para el cálculo del consumo de potencia tiene una limitación significativa. Esta aproximación supone que todas las señales de entrada conmutan a la máxima frecuencia posible, lo cual no es un escenario realsita en la mayoría de los casos.
+
+En un circuito digital real, las señales de entrada suelen tener una distribución de probabilidad de conmutación específica, determinada por la naturaleza de la aplicación y los patrones de datos que se procesan. Para obtener una estimación más precisa del consumo de potencia, es necesario considerar esta distribución de probabilidad y calcular el factor de conmutación adecuado para cada señal de entrada.
+
+La premisa planteada, propone un enfoque más preciso para el cálculo del consumo de potencia, ya que en lugar de suponer que todas las señales conmutan a la máxima frecuencia, se asume que cada señal de entrada conmuta con una distribución uniforme con media 1/N, donde N es el número de entradas de la compuerta.
+
+Este enfoque reconoce que, en promedio, cada señal de entrada tiene una probabilidad igual de 1/N de conmutar en un ciclo de reloj determinado. Al utilizar esta distribución uniforme, se obtiene un factor de conmutación más realista para cada señal de entrada, lo que a su vez conduce a una estimación más precisa del consumo de potencia del circuito.
+
+Es importante destacar que este enfoque sigue siendo una aproximación, ya que en la práctica, las distribuciones de probabilidad de conmutación pueden ser más complejas y depender de los patrones de datos específicos manejados por el circuito. Sin embargo, al considerar la distribución uniforme con media 1/N, se logra una estimación más cercana a la realidad que la suposición de conmutación máxima para todas las entradas.
