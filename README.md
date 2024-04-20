@@ -117,7 +117,7 @@ $t_{cdr} = 9RC + 2RC + 3RC + (\frac{5}{2}+ 450\mu)RC$
 
 $t_{cdr} = 109.89 ps$
 
-Seguidamente, se calculó el tiempo $t_{pdf}$:
+Seguidamente, se calculó el tiempo $t_{cdf}$:
 
 $t_{cdf} = \frac{R}{2}(6C + 3C) + \frac{R}{2}(3C + 450\mu C)$
 
@@ -143,7 +143,7 @@ En la siguiente figura se muestra la simulación para la verificación lógica y
 A continuacion se midió el delay correspondiente en la salida tomando como referencia a la entrada D que conmuta más.
 ![compsimples](Imagenes/delay_nors.png)
 
-Como se observa en la figura anterior el valor de $t_{pdr}$ medido es de 112 ps y el valor de $t_{pdf}$ es de $174 ps$.
+Como se observa en la figura anterior el valor de $t_{pdr}$ medido es de $112 ps$ y el valor de $t_{pdf}$ es de $174 ps$.
 
 #### Delay para la solución con una compuerta compleja
 
