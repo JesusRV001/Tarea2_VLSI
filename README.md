@@ -38,6 +38,12 @@ $C_{in} = \frac{500 \lambda \cdot 1}{5.77}$
 
 $C_{in} = 87 \lambda$
 
+Con esto se definieron los tamaños para los anchos de los transistores, manteniendo la relación P/N = 2:
+
+PMOS se define como $20 \lambda = 20 \cdot 90 nm = 3.6 \mu m$
+
+NMOS se define como $10 \lambda = 10 \cdot 90 nm = 1.8 \mu m$
+
 ##### Método de Elmore para estimación del retardo
 Para realizar este cálculo, se consideró el esquemático de la Figura que se muestra a continuación:
 
@@ -120,6 +126,26 @@ $t_{pdf} = \frac{R}{4}(6C + 3C) + \frac{R}{4}(3C + 450\mu C)$
 $t_{pdf} = 19.98 ps$
 
 ### Parte 2. Verificación de la funcionalidad lógica y eléctrica de los circuitos mediante simulación
+
+#### Delay para la solución con compuertas simples
+
+En la siguiente figura se muestra la simulación para la verificación lógica y eléctrica de la funcion logica realizada con compuertas NOR. En este se observan las cuatro entradas y en color rojo la salida donde se verifica que cumple con la funcion logica.
+![compsimples](Imagenes/electric_nors.png)
+
+A continuacion se midió el delay correspondiente en la salida tomando como referencia a la entrada D que conmuta más.
+![compsimples](Imagenes/delay_nors.png)
+
+Como se observa en la figura anterior el valor de $t_{pdr}$ medido es de 112 ps y el valor de $t_{pdf}$ es de $174 ps$.
+
+#### Delay para la solución con una compuerta compleja
+
+En la siguiente figura se muestra la simulación para la verificación lógica y eléctrica de la función lógica realizada con la compuerta compleja Or-and-inverter.
+![compsimples](Imagenes/electric_oai22.png)
+
+A continuacion se midió el delay correspondiente en la salida tomando como referencia a la entrada D que conmuta más.
+![compsimples](Imagenes/delay_oai22.png)
+
+Como se observa en la figura anterior el valor de $t_{pdr}$ medido es de 117 ps y el valor de $t_{pdf}$ es de $175 ps$.
 
 La teoría de esfuerzo lógico por sí sola no es suficiente para realizar una aproximación precisa del retardo de propagación y contaminación en un circuito CMOS. Esto se debe a que la teoría de esfuerzo lógico es una aproximación simplificada que no considera todos los factores que influyen en el rendimiento del circuito.
 
