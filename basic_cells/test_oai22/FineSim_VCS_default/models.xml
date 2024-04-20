@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--Created by Custom Compiler (TM), build , on Fri Apr 19 17:06:09 2024-->
+<file-format version="1.0" name="stateCategory">
+ <object version="1" type="saModelSetup" name="models">
+  <attribute value="1" type="giBoolean" name="includeGlobal"/>
+  <attribute value="" type="giString" name="includePath"/>
+  <collection name="modelFiles">
+   <object version="1" type="saModelFile" name="modelFiles">
+    <attribute value="1" type="giBoolean" name="enabled"/>
+    <attribute value="./Hspice/lp5mos/xt018.lib" type="giString" name="filename"/>
+    <attribute value="tm" type="giString" name="section"/>
+   </object>
+   <object version="1" type="saModelFile" name="modelFiles">
+    <attribute value="1" type="giBoolean" name="enabled"/>
+    <attribute value="./Hspice/lp5mos/param.lib" type="giString" name="filename"/>
+    <attribute value="3s" type="giString" name="section"/>
+   </object>
+   <object version="1" type="saModelFile" name="modelFiles">
+    <attribute value="1" type="giBoolean" name="enabled"/>
+    <attribute value="./Hspice/lp5mos/config.lib" type="giString" name="filename"/>
+    <attribute value="default" type="giString" name="section"/>
+   </object>
+  </collection>
+  <collection name="modelGroupDefs"/>
+  <collection name="modelGroups"/>
+ </object>
+</file-format>

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!--Created by Custom Compiler (TM), build , on Fri Apr 19 17:06:09 2024-->
+<file-format version="1.0" name="stateCategory">
+ <collection name="cornersSetup">
+  <object version="1" type="saCornersSetup" name="cornersSetup">
+   <collection name="corners">
+    <object version="1" type="saCorner" name="corners">
+     <attribute value="" type="giStringList" name="disableIndices"/>
+     <attribute value="1" type="giBoolean" name="enabled"/>
+     <attribute value="0" type="giBoolean" name="isCornerGroup"/>
+     <collection name="measures"/>
+     <attribute value="corner" type="giString" name="name"/>
+     <attribute value="" type="giStringList" name="namingParameters"/>
+     <collection name="parameters">
+      <object version="1" type="saPair" name="parameters">
+       <attribute value="temp" type="giString" name="name"/>
+       <attribute value="25" type="giString" name="value"/>
+      </object>
+      <object version="1" type="saPair" name="parameters">
+       <attribute value="xt018.lib" type="giString" name="name"/>
+       <attribute value="tm" type="giString" name="value"/>
+      </object>
+      <object version="1" type="saPair" name="parameters">
+       <attribute value="param.lib" type="giString" name="name"/>
+       <attribute value="3s" type="giString" name="value"/>
+      </object>
+      <object version="1" type="saPair" name="parameters">
+       <attribute value="config.lib" type="giString" name="name"/>
+       <attribute value="default" type="giString" name="value"/>
+      </object>
+     </collection>
+    </object>
+   </collection>
+   <attribute value="0" type="giBoolean" name="enabled"/>
+   <attribute value="corners" type="giString" name="name"/>
+   <collection name="paramDefs">
+    <object version="2" type="saCornerParamDef" name="paramDefs">
+     <attribute value="1" type="giBoolean" name="enabled"/>
+     <attribute value="" type="giString" name="includeType"/>
+     <attribute value="temp" type="giString" name="name"/>
+     <attribute value="temp" type="enCornerParameterType" name="parameterType"/>
+     <attribute value="" type="giString" name="path"/>
+     <attribute value="1" type="giBoolean" name="shown"/>
+     <attribute value="25" type="giString" name="startValue"/>
+    </object>
+    <object version="2" type="saCornerParamDef" name="paramDefs">
+     <attribute value="1" type="giBoolean" name="enabled"/>
+     <attribute value="" type="giString" name="includeType"/>
+     <attribute value="xt018.lib" type="giString" name="name"/>
+     <attribute value="modelFile" type="enCornerParameterType" name="parameterType"/>
+     <attribute value="./Hspice/lp5mos/xt018.lib" type="giString" name="path"/>
+     <attribute value="1" type="giBoolean" name="shown"/>
+     <attribute value="tm" type="giString" name="startValue"/>
+    </object>
+    <object version="2" type="saCornerParamDef" name="paramDefs">
+     <attribute value="1" type="giBoolean" name="enabled"/>
+     <attribute value="" type="giString" name="includeType"/>
+     <attribute value="param.lib" type="giString" name="name"/>
+     <attribute value="modelFile" type="enCornerParameterType" name="parameterType"/>
+     <attribute value="./Hspice/lp5mos/param.lib" type="giString" name="path"/>
+     <attribute value="1" type="giBoolean" name="shown"/>
+     <attribute value="3s" type="giString" name="startValue"/>
+    </object>
+    <object version="2" type="saCornerParamDef" name="paramDefs">
+     <attribute value="1" type="giBoolean" name="enabled"/>
+     <attribute value="" type="giString" name="includeType"/>
+     <attribute value="config.lib" type="giString" name="name"/>
+     <attribute value="modelFile" type="enCornerParameterType" name="parameterType"/>
+     <attribute value="./Hspice/lp5mos/config.lib" type="giString" name="path"/>
+     <attribute value="1" type="giBoolean" name="shown"/>
+     <attribute value="default" type="giString" name="startValue"/>
+    </object>
+   </collection>
+   <attribute value="standard" type="enCornersSetupType" name="setupType"/>
+   <collection name="tandemGroups"/>
+  </object>
+ </collection>
+</file-format>

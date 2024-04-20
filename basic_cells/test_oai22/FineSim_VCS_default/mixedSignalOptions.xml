@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<!--Created by Custom Compiler (TM), build , on Fri Apr 19 17:06:09 2024-->
+<file-format version="1.0" name="stateCategory">
+ <object version="1" type="saMixedSignalOptions" name="mixedSignalOptions">
+  <collection name="a2dInterfaceElements">
+   <object version="1" type="saA2DInterfaceElement" name="a2dInterfaceElements">
+    <attribute value="" type="giString" name="ceff"/>
+    <attribute value="/Out" type="giString" name="element"/>
+    <attribute value="net" type="saElementType" name="elementType"/>
+    <attribute value="off" type="saHiZState" name="highImpedance"/>
+    <attribute value="80" type="giString" name="highThreshold"/>
+    <attribute value="20" type="giString" name="lowThreshold"/>
+    <attribute value="X" type="saLogicValue" name="midvLogic"/>
+    <attribute value="" type="giString" name="midvTime"/>
+    <attribute value="0.1" type="giString" name="minv"/>
+    <attribute value="Z" type="saLogicValue" name="minvLogic"/>
+    <attribute value="%" type="saIEThresholdUnit" name="thresholdUnit"/>
+    <attribute value="/vdd!" type="giString" name="vdd"/>
+    <attribute value="" type="giString" name="xband"/>
+   </object>
+   <object version="1" type="saA2DInterfaceElement" name="a2dInterfaceElements">
+    <attribute value="" type="giString" name="ceff"/>
+    <attribute value="/net11" type="giString" name="element"/>
+    <attribute value="net" type="saElementType" name="elementType"/>
+    <attribute value="off" type="saHiZState" name="highImpedance"/>
+    <attribute value="80" type="giString" name="highThreshold"/>
+    <attribute value="20" type="giString" name="lowThreshold"/>
+    <attribute value="X" type="saLogicValue" name="midvLogic"/>
+    <attribute value="" type="giString" name="midvTime"/>
+    <attribute value="0.1" type="giString" name="minv"/>
+    <attribute value="Z" type="saLogicValue" name="minvLogic"/>
+    <attribute value="%" type="saIEThresholdUnit" name="thresholdUnit"/>
+    <attribute value="/vdd!" type="giString" name="vdd"/>
+    <attribute value="" type="giString" name="xband"/>
+   </object>
+  </collection>
+  <attribute value="0" type="giBoolean" name="alwaysUsePortMapOption"/>
+  <attribute value="[%d]" type="giString" name="busFormat"/>
+  <attribute value="" type="giString" name="connectModulesInstallDirFilePatterns"/>
+  <attribute value="" type="giString" name="connectModulesInstallDirFiles"/>
+  <attribute value="" type="giString" name="connectModulesUserDir"/>
+  <attribute value="" type="giString" name="connectModulesUserDirFilePatterns"/>
+  <collection name="connectRuleElements"/>
+  <attribute value="" type="giString" name="connectRulesInstallDirFilePatterns"/>
+  <attribute value="" type="giString" name="connectRulesInstallDirFiles"/>
+  <attribute value="" type="giString" name="connectRulesUserDirFilePatterns"/>
+  <collection name="connectionModules"/>
+  <collection name="connectionRules"/>
+  <collection name="d2aInterfaceElements">
+   <object version="1" type="saD2AInterfaceElement" name="d2aInterfaceElements">
+    <attribute value="0.2n" type="giString" name="delay"/>
+    <attribute value="/A" type="giString" name="element"/>
+    <attribute value="net" type="saElementType" name="elementType"/>
+    <attribute value="120p" type="giString" name="fallTime"/>
+    <attribute value="100" type="giString" name="highVoltage"/>
+    <attribute value="%" type="saIEThresholdUnit" name="levelUnit"/>
+    <attribute value="midPoint" type="saD2ALogicXAction" name="logicX"/>
+    <attribute value="0" type="giString" name="lowVoltage"/>
+    <attribute value="0" type="giBoolean" name="powerNet"/>
+    <attribute value="100p" type="giString" name="riseTime"/>
+    <attribute value="/vdd!" type="giString" name="vdd"/>
+   </object>
+   <object version="1" type="saD2AInterfaceElement" name="d2aInterfaceElements">
+    <attribute value="0.2n" type="giString" name="delay"/>
+    <attribute value="/B" type="giString" name="element"/>
+    <attribute value="net" type="saElementType" name="elementType"/>
+    <attribute value="120p" type="giString" name="fallTime"/>
+    <attribute value="100" type="giString" name="highVoltage"/>
+    <attribute value="%" type="saIEThresholdUnit" name="levelUnit"/>
+    <attribute value="midPoint" type="saD2ALogicXAction" name="logicX"/>
+    <attribute value="0" type="giString" name="lowVoltage"/>
+    <attribute value="0" type="giBoolean" name="powerNet"/>
+    <attribute value="100p" type="giString" name="riseTime"/>
+    <attribute value="/vdd!" type="giString" name="vdd"/>
+   </object>
+   <object version="1" type="saD2AInterfaceElement" name="d2aInterfaceElements">
+    <attribute value="0.2n" type="giString" name="delay"/>
+    <attribute value="/C" type="giString" name="element"/>
+    <attribute value="net" type="saElementType" name="elementType"/>
+    <attribute value="120p" type="giString" name="fallTime"/>
+    <attribute value="100" type="giString" name="highVoltage"/>
+    <attribute value="%" type="saIEThresholdUnit" name="levelUnit"/>
+    <attribute value="midPoint" type="saD2ALogicXAction" name="logicX"/>
+    <attribute value="0" type="giString" name="lowVoltage"/>
+    <attribute value="0" type="giBoolean" name="powerNet"/>
+    <attribute value="100p" type="giString" name="riseTime"/>
+    <attribute value="/vdd!" type="giString" name="vdd"/>
+   </object>
+   <object version="1" type="saD2AInterfaceElement" name="d2aInterfaceElements">
+    <attribute value="0.2n" type="giString" name="delay"/>
+    <attribute value="/D" type="giString" name="element"/>
+    <attribute value="net" type="saElementType" name="elementType"/>
+    <attribute value="120p" type="giString" name="fallTime"/>
+    <attribute value="100" type="giString" name="highVoltage"/>
+    <attribute value="%" type="saIEThresholdUnit" name="levelUnit"/>
+    <attribute value="midPoint" type="saD2ALogicXAction" name="logicX"/>
+    <attribute value="0" type="giString" name="lowVoltage"/>
+    <attribute value="0" type="giBoolean" name="powerNet"/>
+    <attribute value="100p" type="giString" name="riseTime"/>
+    <attribute value="/vdd!" type="giString" name="vdd"/>
+   </object>
+  </collection>
+  <attribute value="ddiscrete" type="giString" name="defaultNetDiscipline"/>
+  <attribute value="" type="giString" name="defaultResistanceMapFile"/>
+  <attribute value="basic" type="saDisciplineResolution" name="disciplineResolution"/>
+  <collection name="e2nInterfaceElements"/>
+  <collection name="e2rInterfaceElements"/>
+  <attribute value="0" type="giBoolean" name="enableRTVS"/>
+  <attribute value="" type="giString" name="existingControlFile"/>
+  <attribute value="" type="giString" name="extraOptions"/>
+  <attribute value="" type="giString" name="extraOptionsTop"/>
+  <attribute value="" type="giString" name="extraOptionsUcli"/>
+  <attribute value="" type="giString" name="extraOptionsUcliTop"/>
+  <attribute value="cosim" type="saMixedSignalFlow" name="flowType"/>
+  <collection name="forceDigitalNets"/>
+  <attribute value="0" type="giBoolean" name="ieReportAMS"/>
+  <attribute value="0" type="giBoolean" name="ieReportActivity"/>
+  <attribute value="0" type="giBoolean" name="mviewVlogNoPortSwap"/>
+  <collection name="n2eInterfaceElements"/>
+  <collection name="nodeResistanceOverrides"/>
+  <collection name="r2eInterfaceElements"/>
+  <collection name="resistanceMapConfigs"/>
+  <attribute value="0" type="giBoolean" name="resolveXInstPrefix"/>
+  <attribute value="1" type="giBoolean" name="spicePortOrderAsVlog"/>
+  <attribute value="snps_sptop" type="giString" name="spiceTopName"/>
+  <attribute value="0" type="giBoolean" name="useExistingControlFile"/>
+ </object>
+</file-format>
