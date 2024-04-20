@@ -85,15 +85,23 @@ $t_{pdf} = 144.86 ps$
 
 #### Segunda solución: Compuertas simples
 
+La soluciòn por medio de compuertas simples emplea el uso de 3 compuertas NOR, implicando que el esfuerzo de ramificación es de $B=1$ y el número de etapas $N=2$, el esfuerzo lógico de camino para este tipo de compuertas corresponde a $5/3$.
+
 $P = 2\cdot 2 = 4$
 
 $G = \frac{5}{3} \cdot \frac{5}{3} = \frac{25}{9}$
 
+Con lo que se tienen los datos necesarios para el esfuerzo de camino:
+
 $F = GBH = \frac{25}{9} \cdot 1 \cdot \frac{50}{3} = \frac{1250}{27}$
 
-$X = \sqrt{\frac{1250}{27}} = 6.8$
+$D=2\cdot F^{\frac{1}{2}} \cdot  4 = 18.6 \tau$
 
-$D = 2 \cdot 6.8 \cdot 4 = 18.6 \tau$
+Y finalmente se multiplica por la constante $\tau$:
+
+$D = 18.6 \cdot 20 ps$
+
+$D = 372 ps$
 
 
 
@@ -103,17 +111,17 @@ Para el cálculo de los tiempos de retardo por el método de Elmore para esta co
 ![var](Imagenes/sim.jpg)
 
 En base a este modelo, se calculó cada uno de los tiempos de contaminación y propagación, primeramente el $t_{cdr}$:
-$t_{pdr} = \left(\frac{R}{2} + \frac{R}{2}\right)(6C + 3C) + 4C\left(\frac{R}{2}\right)3C + \frac{R}{2}(3C + 2C + 450\mu C)$
+$t_{cdr} = \left(\frac{R}{2} + \frac{R}{2}\right)(6C + 3C) + 4C\left(\frac{R}{2}\right)3C + \frac{R}{2}(3C + 2C + 450\mu C)$
 
-$t_{pdr} = 9RC + 2RC + 3RC + (\frac{5}{2}+ 450\mu)RC$
+$t_{cdr} = 9RC + 2RC + 3RC + (\frac{5}{2}+ 450\mu)RC$
 
-$t_{pdr} = 109.89 ps$
+$t_{cdr} = 109.89 ps$
 
 Seguidamente, se calculó el tiempo $t_{pdf}$:
 
-$t_{pdf} = \frac{R}{2}(6C + 3C) + \frac{R}{2}(3C + 450\mu C)$
+$t_{cdf} = \frac{R}{2}(6C + 3C) + \frac{R}{2}(3C + 450\mu C)$
 
-$t_{pdf} =39.96 ps$
+$t_{cdf} =39.96 ps$
 
 Luego los tiempos de propagación $t_{pdr}$ y $t_{pdf}$:
 
@@ -145,7 +153,7 @@ En la siguiente figura se muestra la simulación para la verificación lógica y
 A continuacion se midió el delay correspondiente en la salida tomando como referencia a la entrada D que conmuta más.
 ![compsimples](Imagenes/delay_oai22.png)
 
-Como se observa en la figura anterior el valor de $t_{pdr}$ medido es de 117 ps y el valor de $t_{pdf}$ es de $175 ps$.
+Como se observa en la figura anterior el valor de $t_{pdr}$ medido es de $117 ps$ y el valor de $t_{pdf}$ es de $175 ps$.
 
 La teoría de esfuerzo lógico por sí sola no es suficiente para realizar una aproximación precisa del retardo de propagación y contaminación en un circuito CMOS. Esto se debe a que la teoría de esfuerzo lógico es una aproximación simplificada que no considera todos los factores que influyen en el rendimiento del circuito.
 
@@ -153,7 +161,7 @@ En particular, la teoría de esfuerzo lógico no tiene en cuenta los efectos de 
 
 Además, la teoría de esfuerzo lógico asume que las formas de onda de entrada son ideales, con transiciones abruptas entre los niveles lógicos, enn la práctica, las formas de onda de entrada pueden tener tiempos de transición finitos, lo que puede afectar los tiempos de retardo del circuito.
 
-Entonces, aunque la teoría de esfuerzo lógico puede ofrecer una estimación inicial del rendimiento del circuito, para obtener una evaluación precisa de los tiempos de retardo y contaminación, la simulación es el enfoque más efectivo. Posteriormente, la teoría de Elmore surge como una herramienta complementaria, ya que considera los peores escenarios escenarios a los que pueden estar expuestos los circuitos.
+Entonces, aunque la teoría de esfuerzo lógico puede ofrecer una estimación inicial del rendimiento del circuito, para obtener una evaluación precisa de los tiempos de retardo y contaminación, la simulación es el enfoque más efectivo. Posteriormente, la teoría de Elmore surge como una herramienta complementaria, ya que considera los peores escenarios a los que pueden estar expuestos los circuitos.
 
 
 
@@ -168,7 +176,7 @@ Entonces, aunque la teoría de esfuerzo lógico puede ofrecer una estimación in
 
 
 
-En base a a la afirmación planteada sobre el cáluclo de potencia incorrecto, es importante comprender que la aproximación utilizada previamente para el cálculo del consumo de potencia tiene una limitación significativa. Esta aproximación supone que todas las señales de entrada conmutan a la máxima frecuencia posible, lo cual no es un escenario realsita en la mayoría de los casos.
+En base a a la afirmación planteada sobre el cálculo de potencia incorrecto, es importante comprender que la aproximación utilizada previamente para el cálculo del consumo de potencia tiene una limitación significativa. Esta aproximación supone que todas las señales de entrada conmutan a la máxima frecuencia posible, lo cual no es un escenario realista en la mayoría de los casos.
 
 En un circuito digital real, las señales de entrada suelen tener una distribución de probabilidad de conmutación específica, determinada por la naturaleza de la aplicación y los patrones de datos que se procesan. Para obtener una estimación más precisa del consumo de potencia, es necesario considerar esta distribución de probabilidad y calcular el factor de conmutación adecuado para cada señal de entrada.
 
