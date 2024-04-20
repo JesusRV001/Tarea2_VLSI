@@ -171,6 +171,9 @@ Entonces, aunque la teoría de esfuerzo lógico puede ofrecer una estimación in
 ### Parte 3. Implementación de los *Layouts* de los circuitos
 
 
+Primeramente se construyó el trasado a nivel de diagrama de palitos, optimizando las conexiones, con el objetivo de minimizar las capacitancias parásitas existentes, de esta forma establecer la base para la creación de los layouts, además se trazó el camino de Euler para asegurar la conexión del circuito y ninguna sección quede aislada, los diagramas de palitos para ambas soluciones se muestran a continuación:
+![var](Imagenes/aoi.jpg)
+![var](Imagenes/nor.jpg)
 
 
 
