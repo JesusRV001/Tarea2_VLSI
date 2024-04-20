@@ -9,7 +9,7 @@
 
 [2] Process and Device Specification XH018 - 0.18 μm  Modular Mixed Signal HV CMOS, PDS-01813. Release 7.0.1. XFAB Semiconductor Foundries, Nov. 2017.
 
-[3] R. L. Boylestad, Electronic Devices and Circuit Theory, Pearson Educación, 2002.
+[3] J. M. Rabaey, A. Chandrakasan, and B. Nikolić, Digital Integrated Circuits: A Design Perspective, 2nd edition. Upper Saddle River: Prentice Hall, 2002.
 
 ## Desarrollo
 
@@ -155,13 +155,13 @@ A continuacion se midió el delay correspondiente en la salida tomando como refe
 
 Como se observa en la figura anterior el valor de $t_{pdr}$ medido es de $117 ps$ y el valor de $t_{pdf}$ es de $175 ps$.
 
-La teoría de esfuerzo lógico por sí sola no es suficiente para realizar una aproximación precisa del retardo de propagación y contaminación en un circuito CMOS. Esto se debe a que la teoría de esfuerzo lógico es una aproximación simplificada que no considera todos los factores que influyen en el rendimiento del circuito.
+La teoría de esfuerzo lógico por sí sola no es suficiente para realizar una aproximación precisa del retardo de propagación y contaminación en un circuito CMOS. Esto se debe a que la teoría de esfuerzo lógico es una aproximación simplificada que no considera todos los factores que influyen en el rendimiento del circuito [1].
 
-En particular, la teoría de esfuerzo lógico no tiene en cuenta los efectos de las cargas capacitivas parásitas presentes en el circuito real. Estas capacitancias parásitas, que surgen de las interconexiones y las capacitancias de difusión y polisilicio, pueden tener un impacto significativo en los tiempos de retardo, especialmente en el caso de cargas pesadas o caminos de señal largos.
+En particular, la teoría de esfuerzo lógico no tiene en cuenta los efectos de las cargas capacitivas parásitas presentes en el circuito real. Estas capacitancias parásitas, que surgen de las interconexiones y las capacitancias de difusión y polisilicio, pueden tener un impacto significativo en los tiempos de retardo, especialmente en el caso de cargas pesadas o caminos de señal largos [1].
 
-Además, la teoría de esfuerzo lógico asume que las formas de onda de entrada son ideales, con transiciones abruptas entre los niveles lógicos, enn la práctica, las formas de onda de entrada pueden tener tiempos de transición finitos, lo que puede afectar los tiempos de retardo del circuito.
+Además, la teoría de esfuerzo lógico asume que las formas de onda de entrada son ideales, con transiciones abruptas entre los niveles lógicos, enn la práctica, las formas de onda de entrada pueden tener tiempos de transición finitos, lo que puede afectar los tiempos de retardo del circuito [1].
 
-Entonces, aunque la teoría de esfuerzo lógico puede ofrecer una estimación inicial del rendimiento del circuito, para obtener una evaluación precisa de los tiempos de retardo y contaminación, la simulación es el enfoque más efectivo. Posteriormente, la teoría de Elmore surge como una herramienta complementaria, ya que considera los peores escenarios a los que pueden estar expuestos los circuitos.
+Entonces, aunque la teoría de esfuerzo lógico puede ofrecer una estimación inicial del rendimiento del circuito, para obtener una evaluación precisa de los tiempos de retardo y contaminación, la simulación es el enfoque más efectivo. Posteriormente, la teoría de Elmore surge como una herramienta complementaria, ya que considera los peores escenarios a los que pueden estar expuestos los circuitos [1].
 
 
 
@@ -181,10 +181,10 @@ Primeramente se construyó el trasado a nivel de diagrama de palitos, optimizand
 
 En base a a la afirmación planteada sobre el cálculo de potencia incorrecto, es importante comprender que la aproximación utilizada previamente para el cálculo del consumo de potencia tiene una limitación significativa. Esta aproximación supone que todas las señales de entrada conmutan a la máxima frecuencia posible, lo cual no es un escenario realista en la mayoría de los casos.
 
-En un circuito digital real, las señales de entrada suelen tener una distribución de probabilidad de conmutación específica, determinada por la naturaleza de la aplicación y los patrones de datos que se procesan. Para obtener una estimación más precisa del consumo de potencia, es necesario considerar esta distribución de probabilidad y calcular el factor de conmutación adecuado para cada señal de entrada.
+En un circuito digital real, las señales de entrada suelen tener una distribución de probabilidad de conmutación específica, determinada por la naturaleza de la aplicación y los patrones de datos que se procesan. Para obtener una estimación más precisa del consumo de potencia, es necesario considerar esta distribución de probabilidad y calcular el factor de conmutación adecuado para cada señal de entrada [3].
 
-La premisa planteada, propone un enfoque más preciso para el cálculo del consumo de potencia, ya que en lugar de suponer que todas las señales conmutan a la máxima frecuencia, se asume que cada señal de entrada conmuta con una distribución uniforme con media 1/N, donde N es el número de entradas de la compuerta.
+La premisa planteada, propone un enfoque más preciso para el cálculo del consumo de potencia, ya que en lugar de suponer que todas las señales conmutan a la máxima frecuencia, se asume que cada señal de entrada conmuta con una distribución uniforme con media 1/N, donde N es el número de entradas de la compuerta [3].
 
-Este enfoque reconoce que, en promedio, cada señal de entrada tiene una probabilidad igual de 1/N de conmutar en un ciclo de reloj determinado. Al utilizar esta distribución uniforme, se obtiene un factor de conmutación más realista para cada señal de entrada, lo que a su vez conduce a una estimación más precisa del consumo de potencia del circuito.
+Este enfoque reconoce que, en promedio, cada señal de entrada tiene una probabilidad igual de 1/N de conmutar en un ciclo de reloj determinado. Al utilizar esta distribución uniforme, se obtiene un factor de conmutación más realista para cada señal de entrada, lo que a su vez conduce a una estimación más precisa del consumo de potencia del circuito [3].
 
 Es importante destacar que este enfoque sigue siendo una aproximación, ya que en la práctica, las distribuciones de probabilidad de conmutación pueden ser más complejas y depender de los patrones de datos específicos manejados por el circuito. Sin embargo, al considerar la distribución uniforme con media 1/N, se logra una estimación más cercana a la realidad que la suposición de conmutación máxima para todas las entradas.
