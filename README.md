@@ -49,39 +49,39 @@ Para realizar este cálculo, se consideró el esquemático de la Figura que se m
 
 ![var](Imagenes/Com.jpg)
 
-Donde se detallan las resistencias, capacitancias y ramas a tomar en cuenta al establecer el modelo RC. Primeramente se calculó los tiempos de contaminación, iniciando con el $t_{cdr}$:
+Donde se detallan las resistencias, capacitancias y ramas a tomar en cuenta al establecer el modelo RC. Primeramente se calculó los tiempos de contaminación, iniciando con el $t_{pdr}$:
 
-$t_{cdr} = \left(\frac{R}{2} + \frac{R}{2}\right)(12C + 3C) + 4C\left(\frac{R}{2}\right) + 4C\left(\frac{R}{2}\right) + RC\left(3 + 450\mu\right)$
+$t_{pdr} = \left(\frac{R}{2} + \frac{R}{2}\right)(12C + 3C) + 4C\left(\frac{R}{2}\right) + 4C\left(\frac{R}{2}\right) + RC\left(3 + 450\mu\right)$
 
-$t_{cdr} = 15RC + 2RC + 2RC + 19.98 ps$
+$t_{pdr} = 15RC + 2RC + 2RC + 19.98 ps$
 
 Donde $19,98 ps$, corresponde al aporte de tiempo que agrega el inversor conectado a la capacitancia parásita en la conexión con la salida de la compuerta compleja.
 
-$t_{cdr} = 146.52 ps$
+$t_{pdr} = 146.52 ps$
 
-Seguidamente, se calculó el tiempo $t_{cdf}$:
+Seguidamente, se calculó el tiempo $t_{pdf}$:
 
-$t_{cdf} = \left(\frac{R}{2} + \frac{R}{2}\right)(12C + 3C) +  \left(\frac{R}{2}\right)(12C + 3C) $
+$t_{pdf} = \left(\frac{R}{2} + \frac{R}{2}\right)(12C + 3C) +  \left(\frac{R}{2}\right)(12C + 3C) $
 
-$t_{cdf} = 15RC + \frac{15}{2}RC + 19.98 ps$
+$t_{pdf} = 15RC + \frac{15}{2}RC + 19.98 ps$
 
-$t_{cdf} = 169.73 ps $
+$t_{pdf} = 169.73 ps $
 
-Luego se calcularon los tiempos de propagación, primeramente el $t_{pdr} $:
+Luego se calcularon los tiempos de propagación, primeramente el $t_{cdr} $:
 
-$t_{pdr} = \left(\frac{R}{2} + \frac{R}{2}\right)(12C + 3C) + 19.98 ps$
+$t_{cdr} = \left(\frac{R}{2} + \frac{R}{2}\right)(12C + 3C) + 19.98 ps$
 
-$t_{pdr} = \frac{15}{2}RC + \frac{15}{2} RC+ 19.98 ps$
+$t_{cdr} = \frac{15}{2}RC + \frac{15}{2} RC+ 19.98 ps$
 
-$t_{pdr} = 119.88 ps$
+$t_{cdr} = 119.88 ps$
 
-Finalmente se calculó el tiempo $t_{pdf}$
+Finalmente se calculó el tiempo $t_{cdf}$
 
-$t_{pdf} = \left(\frac{R}{2} + \frac{R}{4}\right)(12C + 3C) + 19.98 ps$
+$t_{cdf} = \left(\frac{R}{2} + \frac{R}{4}\right)(12C + 3C) + 19.98 ps$
 
-$t_{pdf} =  \frac{45}{4}RC + \frac{15}{2} RC+ 19.98 ps$
+$t_{cdf} =  \frac{45}{4}RC + \frac{15}{2} RC+ 19.98 ps$
 
-$t_{pdf} = 144.86 ps$
+$t_{cdf} = 144.86 ps$
 
 #### Segunda solución: Compuertas simples
 
@@ -110,30 +110,30 @@ Para el cálculo de los tiempos de retardo por el método de Elmore para esta co
 
 ![var](Imagenes/sim.jpg)
 
-En base a este modelo, se calculó cada uno de los tiempos de contaminación y propagación, primeramente el $t_{cdr}$:
-$t_{cdr} = \left(\frac{R}{2} + \frac{R}{2}\right)(6C + 3C) + 4C\left(\frac{R}{2}\right)3C + \frac{R}{2}(3C + 2C + 450\mu C)$
+En base a este modelo, se calculó cada uno de los tiempos de contaminación y propagación, primeramente el $t_{pdr}$:
+$t_{pdr} = \left(\frac{R}{2} + \frac{R}{2}\right)(6C + 3C) + 4C\left(\frac{R}{2}\right)3C + \frac{R}{2}(3C + 2C + 450\mu C)$
+
+$t_{pdr} = 9RC + 2RC + 3RC + (\frac{5}{2}+ 450\mu)RC$
+
+$t_{pdr} = 299.98 ps$
+
+Seguidamente, se calculó el tiempo $t_{pdf}$:
+
+$t_{pdf} = \frac{R}{2}(6C + 3C) + \frac{R}{2}(3C + 450\mu C)$
+
+$t_{pdf} = \frac{11}{2}(RC)$
+
+$t_{pdf} = 110.45 ps$
+
+Luego los tiempos de propagación $t_{cdr}$ y $t_{cdf}$:
 
 $t_{cdr} = 9RC + 2RC + 3RC + (\frac{5}{2}+ 450\mu)RC$
 
 $t_{cdr} = 299.98 ps$
 
-Seguidamente, se calculó el tiempo $t_{cdf}$:
+$t_{cdf} = \frac{R}{4}(6C + 3C) + \frac{R}{4}(3C + 450\mu C)$
 
-$t_{cdf} = \frac{R}{2}(6C + 3C) + \frac{R}{2}(3C + 450\mu C)$
-
-$t_{cdf} = \frac{11}{2}(RC)$
-
-$t_{cdf} = 110.45 ps$
-
-Luego los tiempos de propagación $t_{pdr}$ y $t_{pdf}$:
-
-$t_{pdr} = \frac{R}{2}(6C + 3C) + \frac{RC}{2}(4 + 450\mu C)$
-
-$t_{pdr} = 260.45 ps$
-
-$t_{pdf} = \frac{R}{4}(6C + 3C) + \frac{R}{4}(3C + 450\mu C)$
-
-$t_{pdf} = 19.98 ps$
+$t_{cdf} = 19.98 ps$
 
 ### Parte 2. Verificación de la funcionalidad lógica y eléctrica de los circuitos mediante simulación
 
