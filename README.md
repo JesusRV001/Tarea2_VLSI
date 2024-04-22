@@ -115,19 +115,21 @@ $t_{cdr} = \left(\frac{R}{2} + \frac{R}{2}\right)(6C + 3C) + 4C\left(\frac{R}{2}
 
 $t_{cdr} = 9RC + 2RC + 3RC + (\frac{5}{2}+ 450\mu)RC$
 
-$t_{cdr} = 109.89 ps$
+$t_{cdr} = 299.98 ps$
 
 Seguidamente, se calculó el tiempo $t_{cdf}$:
 
 $t_{cdf} = \frac{R}{2}(6C + 3C) + \frac{R}{2}(3C + 450\mu C)$
 
-$t_{cdf} =39.96 ps$
+$t_{cdf} = \frac{11}{2}(RC)$
+
+$t_{cdf} = 110.45 ps$
 
 Luego los tiempos de propagación $t_{pdr}$ y $t_{pdf}$:
 
-$t_{pdr} = \frac{R}{2}(6C + 3C) + \frac{RC}{2}(9 + 450\mu C)$
+$t_{pdr} = \frac{R}{2}(6C + 3C) + \frac{RC}{2}(4 + 450\mu C)$
 
-$t_{pdr} = 59.94 ps$
+$t_{pdr} = 260.45 ps$
 
 $t_{pdf} = \frac{R}{4}(6C + 3C) + \frac{R}{4}(3C + 450\mu C)$
 
