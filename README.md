@@ -111,29 +111,29 @@ Para el cálculo de los tiempos de retardo por el método de Elmore para esta co
 ![var](Imagenes/222.jpg)
 
 En base a este modelo, se calculó cada uno de los tiempos de contaminación y propagación, primeramente el $t_{pdr}$:
-$t_{pdr} = \left(\frac{R}{2} + \frac{R}{2}\right)(6C + 3C) + 4C\left(\frac{R}{2}\right)3C + \frac{R}{2}(3C + 2C + 450\mu C)$
+$t_{pdr} = R(6C + 6C) + \frac{R}{2}4C + R(6C + 450\mu C) + \frac{R}{2}4C$
 
-$t_{pdr} = 9RC + 2RC + 3RC + (\frac{5}{2}+ 450\mu)RC$
+$t_{pdr} = 12RC + 4RC + 6RC
 
-$t_{pdr} = 299.98 ps$
+$t_{pdr} = 560.56 ps$
 
 Seguidamente, se calculó el tiempo $t_{pdf}$:
 
-$t_{pdf} = \frac{R}{2}(6C + 3C) + \frac{R}{2}(3C + 450\mu C)$
+$t_{pdf} = R(6C + 6C) + R(6C + 450\mu C)$
 
-$t_{pdf} = \frac{11}{2}(RC)$
+$t_{pdf} = 12RC + 6RC$
 
-$t_{pdf} = 110.45 ps$
+$t_{pdf} = 311.4 ps$
 
 Luego los tiempos de propagación $t_{cdr}$ y $t_{cdf}$:
 
-$t_{cdr} = 9RC + 2RC + 3RC + (\frac{5}{2}+ 450\mu)RC$
+$t_{cdr} = R(6C + 6C) + \frac{R}{2}4C + R(6C + 450\mu C) + \frac{R}{2}4C$
 
-$t_{cdr} = 299.98 ps$
+$t_{cdr} = 560.56 ps$
 
-$t_{cdf} = \frac{R}{4}(6C + 3C) + \frac{R}{4}(3C + 450\mu C)$
+$t_{cdf} = \frac{R}{4}(6C + 6C) + \frac{R}{4}(6C + 450\mu C)$
 
-$t_{cdf} = 19.98 ps$
+$t_{cdf} = 207.6 ps$
 
 ### Parte 2. Verificación de la funcionalidad lógica y eléctrica de los circuitos mediante simulación
 
