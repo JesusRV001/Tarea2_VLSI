@@ -57,7 +57,7 @@ $t_{pdr} = 15RC + 2RC + 2RC + 19.98 ps$
 
 Donde $19,98 ps$, corresponde al aporte de tiempo que agrega el inversor conectado a la capacitancia parásita en la conexión con la salida de la compuerta compleja.
 
-$t_{pdr} = 146.52 ps$
+$t_{pdr} = 504.1 ps$
 
 Seguidamente, se calculó el tiempo $t_{pdf}$:
 
@@ -65,7 +65,7 @@ $t_{pdf} = \left(\frac{R}{2} + \frac{R}{2}\right)(12C + 3C) +  \left(\frac{R}{2}
 
 $t_{pdf} = 15RC + \frac{15}{2}RC + 19.98 ps$
 
-$t_{pdf} = 169.73 ps $
+$t_{pdf} = 409.23 ps $
 
 Luego se calcularon los tiempos de propagación, primeramente el $t_{cdr} $:
 
@@ -73,7 +73,7 @@ $t_{cdr} = \left(\frac{R}{2} + \frac{R}{2}\right)(12C + 3C) + 19.98 ps$
 
 $t_{cdr} = \frac{15}{2}RC + \frac{15}{2} RC+ 19.98 ps$
 
-$t_{cdr} = 119.88 ps$
+$t_{cdr} = 402.18 ps$
 
 Finalmente se calculó el tiempo $t_{cdf}$
 
@@ -81,7 +81,7 @@ $t_{cdf} = \left(\frac{R}{2} + \frac{R}{4}\right)(12C + 3C) + 19.98 ps$
 
 $t_{cdf} =  \frac{45}{4}RC + \frac{15}{2} RC+ 19.98 ps$
 
-$t_{cdf} = 144.86 ps$
+$t_{cdf} = 344.36 ps$
 
 #### Segunda solución: Compuertas simples
 
