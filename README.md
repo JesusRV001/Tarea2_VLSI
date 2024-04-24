@@ -103,7 +103,27 @@ $D = 18.6 \cdot 20 ps$
 
 $D = 372 ps$
 
+Para determinar el tamaño a la entrada de la segunda compuerta NOR se utiliza la ecuacion:
 
+$C_{in} = \frac{C_{out}\cdot g_i}{\hat{f}}$
+
+$C_{in} = \frac{500 \lambda \cdot \frac{5}{3}}{6.80}$
+
+$C_{in} = 122 \lambda$
+
+Con esto se definieron los tamaños para los anchos de los transistores, manteniendo la relación P/N = 4:
+
+Para las compuertas NOR de la primera etapa
+
+PMOS se define como $24 \lambda = 24 \cdot 90 nm = 2.16 \mu m$
+
+NMOS se define como $6 \lambda = 6 \cdot 90 nm = 540 nm$
+
+Para la NOR de la segunda etapa:
+
+PMOS se define como $98 \lambda = 98 \cdot 90 nm = 8.82 \mu m$
+
+NMOS se define como $24 \lambda = 24 \cdot 90 nm = 2.16 \mu m$
 
 ##### Método de Elmore para estimación del retardo
 Para el cálculo de los tiempos de retardo por el método de Elmore para esta compuerta, se tomó en cuenta el esquemático mostrado a continuación:
