@@ -206,7 +206,7 @@ Entonces, aunque la teoría de esfuerzo lógico puede ofrecer una estimación in
 
 Primeramente se construyó el trasado a nivel de diagrama de palitos, optimizando las conexiones, con el objetivo de minimizar las capacitancias parásitas existentes, de esta forma establecer la base para la creación de los layouts, además se trazó el camino de Euler para asegurar la conexión del circuito y ninguna sección quede aislada. El diagrama de palitos correspondiente a la solución con compuertas simples se muestran a continuación:
 
-![var](Imagenes/nor.jpg)
+![stick_nor](Imagenes/stick_nor1.png)
 
 La implementación en Layout en Cunstom Compiler para la compuerta NOR de la primera etapa se presenta a continuación.
 ![nor_l](Imagenes/nor_layout.png)
