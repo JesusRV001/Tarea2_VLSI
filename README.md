@@ -44,6 +44,9 @@ PMOS se define como $20 \lambda = 20 \cdot 90 nm = 3.6 \mu m$
 
 NMOS se define como $10 \lambda = 10 \cdot 90 nm = 1.8 \mu m$
 
+
+
+
 ##### Método de Elmore para estimación del retardo
 Para realizar este cálculo, se consideró el esquemático de la Figura que se muestra a continuación:
 
@@ -125,6 +128,10 @@ PMOS se define como $98 \lambda = 98 \cdot 90 nm = 8.82 \mu m$
 
 NMOS se define como $24 \lambda = 24 \cdot 90 nm = 2.16 \mu m$
 
+Es importante recalcar aquí que dado el gran ancho que ocuparían ambos transistores, se define usar transistores de ancho de 220nm para el NMOS y 880nm para el PMOS, esto requiere de 4 transistores PMOS en paralelo para la red de pull-up y 2 transistores NMOS en paralelo para la red de pull-down, esto para las compuertas NOR de la primera etapa. Para la NOR de la segunda etapa se requieren 10 PMOS de ancho 880nm para la red pull-up y 10 NMOS de ancho 220nm para la red de pull-down. A continuación se muestra el esquemático para la compuerta NOR. 
+
+![nor](Imagenes/schematic_nors.png)
+
 ##### Método de Elmore para estimación del retardo
 Para el cálculo de los tiempos de retardo por el método de Elmore para esta compuerta, se tomó en cuenta el esquemático mostrado a continuación:
 
@@ -159,6 +166,10 @@ $t_{cdf} = 207.6 ps$
 
 #### Delay para la solución con compuertas simples
 
+El esquemático de pruebas utilizado para la verificación de la solución con compuertas simples se presenta en la siguiente figura.
+
+![test_nors](Imagenes/test_nors.png)
+
 En la siguiente figura se muestra la simulación para la verificación lógica y eléctrica de la funcion logica realizada con compuertas NOR. En este se observan las cuatro entradas y en color rojo la salida donde se verifica que cumple con la funcion logica.
 ![compsimples](Imagenes/electric_nors.png)
 
@@ -168,6 +179,9 @@ A continuacion se midió el delay correspondiente en la salida tomando como refe
 Como se observa en la figura anterior el valor de $t_{pdr}$ medido es de $112 ps$ y el valor de $t_{pdf}$ es de $174 ps$.
 
 #### Delay para la solución con una compuerta compleja
+El esquemático de pruebas utilizado para la verificación de la solución con compuerta compleja OAI22 se presenta en la siguiente figura.
+
+![test_nors](Imagenes/test_oai22.png)
 
 En la siguiente figura se muestra la simulación para la verificación lógica y eléctrica de la función lógica realizada con la compuerta compleja Or-and-inverter.
 ![compsimples](Imagenes/electric_oai22.png)
@@ -187,19 +201,19 @@ Entonces, aunque la teoría de esfuerzo lógico puede ofrecer una estimación in
 
 
 
-
-
-
 ### Parte 3. Implementación de los *Layouts* de los circuitos
 
 
-Primeramente se construyó el trasado a nivel de diagrama de palitos, optimizando las conexiones, con el objetivo de minimizar las capacitancias parásitas existentes, de esta forma establecer la base para la creación de los layouts, además se trazó el camino de Euler para asegurar la conexión del circuito y ninguna sección quede aislada, los diagramas de palitos para ambas soluciones se muestran a continuación:
-![var](Imagenes/aoi.jpg)
+Primeramente se construyó el trasado a nivel de diagrama de palitos, optimizando las conexiones, con el objetivo de minimizar las capacitancias parásitas existentes, de esta forma establecer la base para la creación de los layouts, además se trazó el camino de Euler para asegurar la conexión del circuito y ninguna sección quede aislada. El diagrama de palitos correspondiente a la solución con compuertas simples se muestran a continuación:
+
 ![var](Imagenes/nor.jpg)
 
+La implementación en Layout en Cunstom Compiler para la compuerta NOR de la primera etapa se presenta a continuación.
+![nor_l](Imagenes/nor_layout.png)
 
 
-
+El diagrama de palitos correspondiente a la solución con la compuerta compleja OAI22 se muestran a continuación:
+![var](Imagenes/aoi.jpg)
 
 En base a a la afirmación planteada sobre el cálculo de potencia incorrecto, es importante comprender que la aproximación utilizada previamente para el cálculo del consumo de potencia tiene una limitación significativa. Esta aproximación supone que todas las señales de entrada conmutan a la máxima frecuencia posible, lo cual no es un escenario realista en la mayoría de los casos.
 
