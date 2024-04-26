@@ -215,6 +215,9 @@ La implementación en Layout en Cunstom Compiler para la compuerta NOR de la pri
 El diagrama de palitos correspondiente a la solución con la compuerta compleja OAI22 se muestran a continuación:
 ![var](Imagenes/aoi.jpg)
 
+Finalmente, se trazó y construyo el Layout para la compuerta compleja OAI22, el resultado se muestra en la siguiente figura:
+![var](Imagenes/j.jpg)
+
 En base a a la afirmación planteada sobre el cálculo de potencia incorrecto, es importante comprender que la aproximación utilizada previamente para el cálculo del consumo de potencia tiene una limitación significativa. Esta aproximación supone que todas las señales de entrada conmutan a la máxima frecuencia posible, lo cual no es un escenario realista en la mayoría de los casos.
 
 En un circuito digital real, las señales de entrada suelen tener una distribución de probabilidad de conmutación específica, determinada por la naturaleza de la aplicación y los patrones de datos que se procesan. Para obtener una estimación más precisa del consumo de potencia, es necesario considerar esta distribución de probabilidad y calcular el factor de conmutación adecuado para cada señal de entrada [3].
