@@ -132,6 +132,12 @@ Es importante recalcar aquí que dado el gran ancho que ocuparían ambos transis
 
 ![nor](Imagenes/schematic_nors.png)
 
+Seguidamente se calculan los anchos para los transistores a emplear en la solución de compuerta compleja AOI22, empleando la relación P/N = 2, los anchos de los transistores corresponden a $6 \lambda = 6 \cdot 90 nm = 540 nm$ para el PMOS y $3 \lambda = 3 \cdot 90 nm = 270 nm$ para el NMOS. Dados estos tamaños, se requiere de 4 transistores PMOS en paralelo para la red de pull-up y 2 transistores NMOS en paralelo para la red de pull-down. El esquemático correspondiente se muestra a continuación:
+
+![nor](Imagenes/caa.png)
+
+
+
 ##### Método de Elmore para estimación del retardo
 Para el cálculo de los tiempos de retardo por el método de Elmore para esta compuerta, se tomó en cuenta el esquemático mostrado a continuación:
 
